@@ -2,12 +2,14 @@
 <html lang="en-us">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Heitor Giusti</title>
         <link rel="stylesheet" type="text/css" href="./css/portifolio.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">  
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
     </head>
 
     <body class="background">
@@ -18,7 +20,7 @@
             <a class="active" href="#Home"><li>Home</li></a>
             <a href="#About"><li>About</li></a>
             <a href="#GitHub"><li>GitHub</li></a>
-            <a href="#Contact"><li>Contact</li></a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact"><li>Contact</li></a>
         </div>
         <!--NAV BAR END-->
 
@@ -54,7 +56,7 @@
                      I love nature, dogs and thinking about the universe and life.<br><br>
                      I am a graduate of The Tech Academy’s Software Developer Boot Camp, and trained and experienced<br>
                      in the following web and programming languages: <strong>HTML, CSS, JavaScript, SQL, C#</strong> and more.<br><br>
-                     I am a full-stack developer and would love to work with you on your project.   <a href="#Contact">Contact me!</a></p>
+                     I am a full-stack developer and would love to work with you on your project.
                 </div>
 
         <!--GIT HUB-->
@@ -73,14 +75,11 @@
             </div> 
         
         <!--CONTACT -->
-        <div class="contact_container">
-            <section id="Contact">
-                <div class="h1_contact">
-                    <h1>CONTACT ME</h1>
-                </div>
-        </div>
-        <div class="contact_box">
-            <form action="https://formspree.io/f/xbjbngno" method="POST">
+        <div class="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button" id="Pop_Up_Button_Hide">Contact me!</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/xbjbngno" method="POST" class="form-container">
+                <h1>Contact</h1>
                 <label for="fname">Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your Name">
 
@@ -88,39 +87,18 @@
                 <input type="text" id="email" name="email" placeholder="Your email">
 
                 <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write your message here" style="height:150px"></textarea>
+                <input type="text" id="message" name="message" placeholder="Write your message here">
 
-                <input type="submit" value="Submit">
+                <button type="submit" class="btnsubmit">Submit</button>
+                <button type="button" class="btncancel" onclick="closeForm()">Close</button>
             </form>
         </div>
-
+        </div>
         <!--FOOTER -->
-        <footer>Heitor Giusti, 2022
+        <footer>Heitor Giusti, 2023
         </footer>
             
-
+        <script src="./js/portifolio.js"></script>
         </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>

@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth; 
+}
+
 /* BODY */
 body {
     text-align: center;
@@ -175,81 +179,118 @@ body {
 }
 
 /* CONTACT */
-.h1_contact {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    font-size: 40px;
-    color: rgb(255, 255, 255);
-    position: relative;
-    text-decoration: none;
+.form-popup {
+    z-index: 8; 
+    display: none; 
+    position: fixed; 
+    bottom: .5vw; 
+    right: .5vw; 
 }
 
-.h1_contact::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: rgb(0, 238, 255);
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
-  }
-
-.h1_contact:hover:before {
-    transform-origin: left;
-    transform: scaleX(1);
-  } 
-
-.contact_container {
-    margin: auto;
+/* Form styling */
+.form-container {
+    max-width: 30vw; 
+    padding: 1vw; 
+    background-image: linear-gradient(to right, #25a9e19e, #4481eb9f, #04c0fea7, #3f85edb1);
+    box-shadow: 0 4px 15px 0 rgba(92, 236, 255, 0.83); 
+    border: 0px;
     border-radius: 10px;
-    width: 25%;
-    padding-top: 25%;
-    text-align: center;
 }
 
-.contact_box {
-    box-sizing: border-box;
-    border-radius: 5px;
-    background-color: #00fff218;
-    padding: 20px;
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
+/* Input fields */
+.form-container input[type=text] {
+    width: 90%; 
+    padding: .93vw; 
+    margin: .6vw 0 .6vw 0; 
+    border: none; 
+    background: rgb(255, 255, 255); 
+    font-size: 1vw; 
 }
 
-input[type=text], textarea {
-    width: 100%;
-    padding: 13px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+.form-container input[type=text]:focus{
+    outline: 2px solid rgb(0, 174, 255);     
   }
 
-input[type=text]:hover, textarea:hover {
-    border-color: rgb(0, 255, 170);
+
+/* Submit button */
+.btnsubmit {
+    font-family: 'Open Sans', sans-serif;
+    height: 40px;
+    width: 90px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #00688ba3;
+    color: #fff;
 }
 
-input[type=submit] {
-    background-color: #002a777a;
-    color: rgb(255, 255, 255);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-  }
+.btnsubmit:hover {
+    box-shadow: 0 6px 15px 0 rgba(92, 255, 214, 0.83);
+    font-weight: 600;
+}
 
-input[type=submit]:hover {
-    background-color: #4187f07a;
-  }
+/* Close button */
+.btncancel {
+    font-family: 'Open Sans', sans-serif;
+    height: 40px;
+    width: 90px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #00688ba3;
+    color: #fff;
+}
 
-label {
-    color: white;
+/* Styling for close button on hover */
+.btncancel:hover {
+    box-shadow: 0 6px 15px 0 rgba(255, 0, 0, 0.593);
+    font-weight: 600;
+}
+
+.Pop_Up_Button {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.3vw; 
+    padding: 1.5vw; 
+    cursor: pointer; 
+    width: 25%; 
+    height: auto; 
+    position: fixed; 
+    bottom: 1.75vw; 
+    right: 1.75vw; 
+    width: 15vw; 
+    background-image: linear-gradient(to right, #3f86ed, #04befe, #4481eb, #25aae1);
+    box-shadow: 0 7px 15px 0 rgba(11, 91, 102, 0.848);
+    color: rgb(255, 255, 255); 
+    border: 0px;
+    border-radius: 30px;
+    cursor: pointer; 
+    -webkit-animation: movePopup 3s; 
+    animation: movePopup 3s;
+}
+
+.Pop_Up_Button:hover {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(92, 236, 255, 0.83);
+    }
+
+@keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+#myForm h1 {
+    font-family: 'League Spartan', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px rgb(0, 0, 0)
+}
+
+#myForm {
+    font-family: 'League Spartan', sans-serif;
+    color: #fff;
+    text-shadow: 3px 3px rgb(0, 0, 0)
 }
 
 /* FOOTER */
