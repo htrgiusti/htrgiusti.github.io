@@ -1,104 +1,141 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Heitor Giusti</title>
-        <link rel="stylesheet" type="text/css" href="./css/portifolio.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
-    </head>
+<html lang="en">
 
-    <body class="background">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heitor Giusti</title>
 
-        <!--NAV BAR-->
-        <div class="navbar">
-            <ul class="menu">
-            <a class="active" href="#Home"><li>Home</li></a>
-            <a href="#About"><li>About</li></a>
-            <a href="#GitHub"><li>GitHub</li></a>
-            <a onclick="openForm()" ondblclick="closeForm()" class="contact"><li>Contact</li></a>
-        </div>
-        <!--NAV BAR END-->
+    <link rel="stylesheet" href="css/style.css">
 
-        <!--HOME/BACKGROUND VIDEO-->
-        <div id="Home">
-            <video autoplay muted loop class="motion" id="motion">
-                <source src="./images/video/motion.mp4" type="video/mp4">
-            </video>
-        </div>
-        <!--HOME/BACKGROUND VIDEO END-->
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
 
-        <!--HOME/VIDEO TEXT-->
-        <div class="video_text">
-            <h1 class="white_text">Hello, I'm <span style="color: rgb(255, 255, 255)">Heitor Giusti</span>,<br>
-            I am a <span style="color: rgb(255, 255, 255)" >Web Developer</span>.</h1>
-        </div>
-        <!--HOME/VIDEO TEXT END-->
+<body>
 
-        <!--ABOUT CONTAINER-->
-        <div class="about_container">
-            <!--ABOUT-->
-            <section id="About">
-                <div class="h1_aboutme">
-                  <h1>ABOUT ME</h1>
-                </div>
-        </div>
-                <div class="htrimg">
-                    <img src="./images/htr.png" alt="" height="400" width="300">
-                </div>
-                <div class="p_aboutme">
-                  <p>Hi, I'm Heitor and I am a Web Developer who enjoy building creative products from start to finish.<br>
-                     From my early years I’ve always been deeply interested in computing and technology.<br>
-                     I love nature, dogs and thinking about the universe and life.<br><br>
-                     I am a graduate of The Tech Academy’s Software Developer Boot Camp, and trained and experienced<br>
-                     in the following web and programming languages: <strong>HTML, CSS, JavaScript, SQL, C#</strong> and more.<br><br>
-                     I am a full-stack developer and would love to work with you on your project.
-                </div>
+    <!-- header design -->
+    <header class="header">
+        <a href="#" class="logo">Heitor</a>
 
-        <!--GIT HUB-->
-        <div class="github_container">
-            <section id="GitHub">
-                <div class="h1_github">
-                    <h1>GITHUB</h1>
-                </div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+
+            <span class="active-nav"></span>
+        </nav>
+    </header>
+
+    <!-- Home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hello, I'm <span>Heitor Giusti</span></h1>
+            <div class="text-animate">
+                <h3>I am a Web Developer.</h3>
             </div>
-            <div class="githubimg">
-                <img src="./images/kindpng_1280330.png" alt="" height="400" width="400">
+a
+            <div class="btn-box">
+                <a href="#contact" class="btn">Let's talk</a>
             </div>
-            <div class="githubtext">
+
+            <div class="home-imgHover">
+                <img src="./images/homeimg.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- About section design -->
+    <section class="about" id="about">
+        <h2 class="heading">About Me</h2>
+
+        <div class="about-img">
+            <img src="./images/htr.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <p>Hi, I'm Heitor and I am a Web Developer who enjoy building creative products from start to finish.<br>
+                From my early years I’ve always been deeply interested in computing and technology.<br>
+                I love nature, dogs and thinking about the universe and life.<br><br>
+                I am a graduate of The Tech Academy’s Software Developer Boot Camp, and trained and experienced<br>
+                in the following web and programming languages: <span><strong>HTML, CSS, JavaScript, SQL, C#</strong></span> and more.<br><br>
+                I am a full-stack developer and would love to work with you on your project.</p>
+        </div>
+
+        <div class="about-imgHover">
+            <img src="./images/aboutimg.png" alt="">
+        </div>
+
+    </section>
+
+    <!-- GitHub section design -->
+    <section class="github" id="github">
+        <h2 class="heading">Get to know my GitHub</h2>
+
+        <div class="github-img">
+            <img src="./images/github.png" alt="">
+        </div>
+
+        <div class="github-content">
             <p>You can view my coding projects on  <a href="https://github.com/htrgiusti" target="_blank">my GitHub profile!</a></p>
-            
-            </div> 
-        
-        <!--CONTACT -->
-        <div class="Contact">
-            <button onclick="openForm()" class="Pop_Up_Button" id="Pop_Up_Button_Hide">Contact me!</button>
-        <div class="form-popup" id="myForm">
-            <form action="https://formspree.io/f/xbjbngno" method="POST" class="form-container">
-                <h1>Contact</h1>
-                <label for="fname">Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your Name">
-
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Your email">
-
-                <label for="message">Message</label>
-                <input type="text" id="message" name="message" placeholder="Write your message here">
-
-                <button type="submit" class="btnsubmit">Submit</button>
-                <button type="button" class="btncancel" onclick="closeForm()">Close</button>
-            </form>
         </div>
+    </section>
+
+    <!-- Contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact me</h2>
+
+        <form action="https://formspree.io/f/xbjbngno" method="POST" class="form-container">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Address" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" placeholder="Mobile Number" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <span class="focus"></span>
+            </div>
+
+            <div class="btn-box btns">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Heitor Giusti, 2023</p>
         </div>
-        <!--FOOTER -->
-        <footer>Heitor Giusti, 2023
-        </footer>
-            
-        <script src="./js/portifolio.js"></script>
-        </body>
-</html>
+
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-chevrons-up'></i></a>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+
 </html>
